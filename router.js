@@ -1,9 +1,9 @@
 'use strict';
-const Router = require('koa-router');
+import Router from 'koa-router';
 const router = new Router();
-const stuff = require('./controllers/stuffController');
+import {getStuff, postStuff} from './controllers/stuffController.js';
 
-router.get('/stuff', stuff.getStuff);
-router.post('/stuff', stuff.postStuff);
+router.get('/stuff', getStuff);
+router.post('/stuff', postStuff);
 
-module.exports = router;
+export default router;

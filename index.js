@@ -1,11 +1,11 @@
 'use strict';
-const Koa = require('koa');
+import Koa from 'koa';
 const app = new Koa();
-const serve = require('koa-static');
-const bodyParser = require('koa-bodyparser');
+import serve from 'koa-static';
+import bodyParser from 'koa-bodyparser';
 
 
-const router = require('./router');
+import router from './router.js';
 
 const PORT = 3000;
 
